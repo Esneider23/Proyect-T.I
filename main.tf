@@ -15,13 +15,11 @@ terraform {
 }
 
 provider "azurerm" {
-  features {
-  }
-  SUBSCRIPTION_ID= "b3a844cf-108f-48bb-a2ce-33911078b034"
-  TENANT_ID= "88cf8521-ceb7-4d6a-a22f-d87438337dd3"
-  CLIENT_SECRET= "-l48Q~PbjVfLJMeL8ONQJPAVfBuFQFQG1QedtadR"
-  CLIENT_ID=     "c46dc770-b2e8-48d8-ae2a-96cac7b216ea"
-   
+  features {}
+  subscription_id = "b3a844cf-108f-48bb-a2ce-33911078b034"
+  tenant_id       = "88cf8521-ceb7-4d6a-a22f-d87438337dd3"
+  client_secret   = "-l48Q~PbjVfLJMeL8ONQJPAVfBuFQFQG1QedtadR"
+  client_id       = "c46dc770-b2e8-48d8-ae2a-96cac7b216ea"
 }
 
 variable "imagebuild" {
