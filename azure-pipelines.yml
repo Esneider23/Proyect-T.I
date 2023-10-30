@@ -6,13 +6,13 @@ variables:
 
 stages:
 - stage: Provision
-  displayName: 'Creating terraform on Azure'
+  displayName: 'Creating database with terraform on Azure'
   jobs:
-    - job: provision
+    - job : provision
       displayName: 'Provision database instance'
       pool:
         name: UTB
-      variables: # vars from Azure DevOps in the library
+      variables: # vars from azure devOps in library
       - group: azure
       steps:
         - script: |
@@ -22,7 +22,7 @@ stages:
             terraform apply -input=false -auto-approve
           name: 'RunTerraform'
           displayName: 'Run Terraform'
-          env: # these vars are being passed from the variable library specified in Azure DevOps
+          env: # these vars are being passed from the variable library that we specified in Azure DevOps
             ARM_CLIENT_ID: $(ARM_CLIENT_ID)
             ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
             ARM_TENANT_ID: $(ARM_TENANT_ID)
