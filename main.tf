@@ -14,8 +14,6 @@ terraform {
   }
 }
 
-variable "password" {}
-
 provider "azurerm" {
   features {
   }
