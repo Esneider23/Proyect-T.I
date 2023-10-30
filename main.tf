@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.78.0"
+      version = "=3.28.0"
     }
   }
 
@@ -31,14 +31,4 @@ resource "azurerm_resource_group" "rg_utbapp" {
 resource "azurerm_resource_group" "database" {
   name = "database" 
   location = "eastus" 
-}
-
-resource "azurem_cosmosdb_postgresql_cluster" "database"{
-    name = "database-cluster"
-    resource_group_name             = azurerm_resource_group.database.name
-    location                        = azurerm_resource_group.database.location
-    administrator_login_password    = "H@Sh1CoR3!"
-    coordinator_storage_quota_in_mb = 131072
-    coordinator_vcore_count         = 2
-    node_count                      = 0
 }
