@@ -9,7 +9,7 @@ stages:
   displayName: 'Creating terraform on Azure'
   jobs:
     - job: provision
-      displayName: 'Provision container instance'
+      displayName: 'Provision database instance'
       pool:
         name: UTB
       variables: # vars from Azure DevOps in the library
