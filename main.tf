@@ -20,13 +20,3 @@ provider "azurerm" {
   features {
   }
 }
-
-variable "imagebuild" {
-  type = string
-  description = "the latest image build version"
-}
-
-resource "azurerm_resource_group" "database" {
-  name     = "database"
-  location = "eastus"
-}
