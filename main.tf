@@ -5,7 +5,7 @@ terraform {
       version = "3.78.0"
     }
   }
-
+  
   backend "azurerm" {
     resource_group_name  = "Backup-terraform"
     storage_account_name = "terraformstateti"
@@ -19,7 +19,7 @@ provider "azurerm" {
   }
 }
 
-resource "azurerm_resource_group" "database" {
-  name     = "database"
-  location = "eastus"
+resource "azurerm_resource_group" "rg_utbapp" {
+  name = "rg_utbapp" # this is the name on azure
+  location = "eastus" # data center location on azure
 }
