@@ -9,10 +9,9 @@ trigger:
 variables:
   tag: '$(Build.BuildId)'
 
-stage:
+stages:
 - stage: Provision
   displayName: 'Creating terraform on Azure'
-  dependsOn: Build
   jobs:
     - job : provision
       displayName: 'Provision container instance'
