@@ -20,3 +20,8 @@ provider "azurerm" {
   features {
   }
 }
+
+resource "azurerm_resource_group" "database" {
+  name     = "database"
+  location = "eastus"
+}
