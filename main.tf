@@ -23,3 +23,8 @@ variable "imagebuild" {
   type = string
   description = "the latest image build version"
 }
+
+resource "azurerm_resource_group" "rg_utbapp" {
+  name = "rg_utbapp" # this is the name on azure
+  location = "eastus" # data center location on azure
+}
