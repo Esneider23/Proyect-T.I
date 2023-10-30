@@ -19,7 +19,7 @@ stages:
             set -e 
 
             terraform init -upgrade -input=false
-            terraform apply -input=false -auto-approve
+            terraform apply -var-file=terraform.tfvars -input=false -auto-approve
           name: 'RunTerraform'
           displayName: 'Run Terraform'
           env: # these vars are being passed from the variable library specified in Azure DevOps
